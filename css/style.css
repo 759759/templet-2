@@ -971,7 +971,7 @@ input.inpo {
   padding-top: var(--section-padding);
   overflow: hidden;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 50px;
 }
 .about img {
   position: relative;
@@ -988,7 +988,7 @@ input.inpo {
 /* End About */
 /* Start Stats */
 .stats {
- 
+ margin-top:50px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: center;
@@ -1464,6 +1464,7 @@ button.contact-link {
 
 /* Start Subscribe */
 .subscribe {
+margin-top:50px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/shuffle-01.jpg");
