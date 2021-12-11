@@ -105,27 +105,12 @@ $('#nav').onePageNav({
 	scrollThreshold: 0.9,
 	filter: '',
 	easing: 'swing',
-  begin: function() {
-		//I get fired when the animation is starting
-	},
-	end: function() {
-		//I get fired when the animation is ending
-	},
-	scrollChange: function($currentListItem) {
-		//I get fired when you enter a section and I pass the list item of the section
-	}
+ 
+	
 
 });
 //end add active class to nav when arrive section
-$('#nav').onePageNav({
-	begin: function() {
-		//Hack so you can click other menu items after the initial click
-		$('body').append('<div id="device-dummy" style="height: 1px;"></div>');
-	},
-	end: function() {
-		$('#device-dummy').remove();
-	}
-});
+
 
 
 
