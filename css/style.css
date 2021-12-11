@@ -1062,7 +1062,7 @@ input.inpo {
   overflow: hidden;
   padding-top: var(--section-padding) ;
   padding-bottom:  var(--section-padding) ;
-  
+  margin-top:50px;
 }
 
 .our-skills .container {
@@ -1243,7 +1243,8 @@ margin-bottom: 30px;
 /* end skills */
 
 /* Start Quote */
-.quote {
+.quote 
+margin-top:50px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/wep-dis1.jpeg");
@@ -1300,6 +1301,7 @@ margin-bottom: 30px;
 .pricing {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+    margin-top:50px;
 }
 .pricing .plans {
   display: grid;
@@ -1544,6 +1546,7 @@ button.contact-link {
 .contact {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+    margin-top:50px;
 }
 .contact .content1 {
   display: flex;
