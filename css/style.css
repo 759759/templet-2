@@ -370,8 +370,8 @@ header nav ul li a:hover::after{
   
   }
     .nav-links.open {
-      clip-path: circle(1000px at 100% );
-      -webkit-clip-path: circle(1000px at 100% );
+      clip-path: circle(3000px at 300% );
+      -webkit-clip-path: circle(3000px at 300% );
       pointer-events: all;
       
       right: 0;
