@@ -339,7 +339,7 @@ header nav ul li a:hover::after{
       position: fixed;
       background: #19c8fa ;
       top:97px;
-      Min-height: 100vh;
+      
       right: 0;
       font-size: 20px;
       font-weight: bold;
