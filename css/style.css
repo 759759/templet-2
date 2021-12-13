@@ -42,7 +42,8 @@
   }
 html{
 padding-top:97px;
-} 
+margin-top:-97px;
+}
   body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
