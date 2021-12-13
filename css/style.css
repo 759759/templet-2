@@ -41,7 +41,7 @@
     overflow-x: hidden;
   }
 html{
-padding-top:97px;
+padding-top:-97px;
 margin-top:-97px;
 }
   body {
