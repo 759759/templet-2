@@ -40,6 +40,9 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+html{
+padding-top:97px;
+} 
   body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
