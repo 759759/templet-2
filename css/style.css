@@ -438,9 +438,7 @@ header nav ul li a:hover::after{
 
     /* end header */
   
-body {
-padding-top:97px;
-} 
+
 /* start landing */
 .landing {
   height: 100%;
