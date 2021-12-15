@@ -242,7 +242,7 @@
    
   }
   header nav ul li a {
-    padding: 40px 10px;
+    padding: 20px 5px;
     display: block;
     color: white ;
     text-decoration: none;
@@ -342,7 +342,7 @@ header nav ul li a:hover::after{
     .nav-links {
       position: fixed;
       background: #19c8fa ;
-      top:97px;
+      top:0px;
       
       right: 0;
       font-size: 20px;
