@@ -533,7 +533,7 @@ header nav ul li a:hover::after{
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  margin-top: 40px;
+  margin-top: 97px;
 }
 @media (min-width: 768px) {
   .services .services-container {
@@ -580,7 +580,7 @@ header nav ul li a:hover::after{
 
 /* start design */
  .design {
-   margin-top: 50px;
+   margin-top: 97px;
   position: relative;
   height: 600px;
   padding-top: var(--section-padding);
@@ -662,7 +662,7 @@ header nav ul li a:hover::after{
 /* start  portfolio  */
 
 .portfolio {
-  margin-top: 50px;
+  margin-top: 97px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
  
@@ -926,7 +926,7 @@ input.inpo {
   /* Start Video */
 .video {
   position: relative;
-  
+  margin-top:97px;
   
 }
 .video::before {
@@ -974,7 +974,7 @@ input.inpo {
   padding-top: var(--section-padding);
   overflow: hidden;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 97px;
 }
 .about img {
   position: relative;
@@ -991,7 +991,7 @@ input.inpo {
 /* End About */
 /* Start Stats */
 .stats {
- margin-top:50px;
+ margin-top:97px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: center;
@@ -1065,7 +1065,7 @@ input.inpo {
   overflow: hidden;
   padding-top: var(--section-padding) ;
   padding-bottom:  var(--section-padding) ;
-  margin-top:50px;
+  margin-top:97px;
 }
 
 .our-skills .container {
@@ -1247,7 +1247,7 @@ margin-bottom: 30px;
 
 /* Start Quote */
 .quote 
-margin-top:50px;
+margin-top:97px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/wep-dis1.jpeg");
@@ -1467,7 +1467,7 @@ button.contact-link {
 
 /* Start Subscribe */
 .subscribe {
-margin-top:50px;
+margin-top:97px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/shuffle-01.jpg");
@@ -1550,7 +1550,7 @@ margin-top:50px;
 .contact {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-    margin-top:50px;
+    margin-top:97px;
 }
 .contact .content1 {
   display: flex;
@@ -1663,7 +1663,7 @@ margin-top:50px;
 
 /* Start Footer */
 .footer {
-  margin-top: 50px;
+  margin-top: 97px;
   padding-top: calc(var(--section-padding) / 2);
   padding-bottom: calc(var(--section-padding) / 2);
   background-image: url("../images/shuffle-01.jpg");
