@@ -40,15 +40,11 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-
   body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
     background-color: #f3f3f3;
-      padding-top:97px;
-
-
-
+    padding-top: -97px;
     
   }
   ul {
@@ -122,12 +118,12 @@
 
 
  .scroll-indicator {
-  position: absolute;
+  position: static;
   top: 87px;
   left: 0;
   height: 10px;
   background:rgb(211, 14, 73);
-  z-index: 20000;
+  z-index: 2;
   
 }
 
@@ -174,8 +170,8 @@
     left: 0;
     top:0;
     width: 100%;
-    z-index: 2;
-   margin-bottom:97px;
+    z-index: 3;
+   
    background-color: rgba(0, 0, 0, 0.87);
   }
   header .container {
@@ -183,7 +179,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    min-height: 97px;
+    height: 97px;
     
   }
 
@@ -232,7 +228,7 @@
      
   
     header nav ul li a {
-     
+      padding: 21px !important;
       text-align: center;
      font-size: 20px !important;
     }
@@ -242,7 +238,7 @@
    
   }
   header nav ul li a {
-    padding: 20px 5px;
+    padding: 40px 10px;
     display: block;
     color: white ;
     text-decoration: none;
@@ -343,7 +339,7 @@ header nav ul li a:hover::after{
       position: fixed;
       background: #19c8fa ;
       top:97px;
-      
+      min-height: 100vh;
       right: 0;
       font-size: 20px;
       font-weight: bold;
@@ -374,11 +370,11 @@ header nav ul li a:hover::after{
   
   }
     .nav-links.open {
-      clip-path: circle(3000px at 300% );
-      -webkit-clip-path: circle(3000px at 300% );
+      clip-path: circle(1000px at 100% );
+      -webkit-clip-path: circle(1000px at 100% );
       pointer-events: all;
       
-      right: 0;
+      /* right: 0; */
     }
     
 
@@ -439,17 +435,102 @@ header nav ul li a:hover::after{
       background-color: #fff;
     }
 
+    @media (max-width : 767px ) and (orientation : landscape) {
+      header nav ul li a {
+        padding: 12px !important;
+      }
+    }
     /* end header */
   
-
 /* start landing */
 .landing {
-  height: 100%;
-
- 
-
+  height: 100vh;
   position: relative;
 }
+
+
+ /* Slideshow container */
+ .slideshow-container {
+  width:100%;
+  position: relative;
+  height: 100vh;
+ 
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The circles or bullets and indicators */
+.dots {
+ position: relative; 
+  top:-50px;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  z-index: 1;
+  
+}
+
+.enable, .dots:hover {
+  background-color: var(--main-color);
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+
+.Containers img {
+  width:100%;
+ height:100vh;
+}
+
 .landing .overlay {
   position: absolute;
   left: 0;
@@ -492,21 +573,9 @@ header nav ul li a:hover::after{
   font-size: 14px;
   line-height: 2;
 }
-.landing .change-background {
-  position: absolute;
-  top: 56%;
-  transform: translateY(-50%);
-  color: #ddd;
-}
-@media (max-width: 767px) {
- 
-}
-.landing .fa-angle-left {
-  left: 30px;
-}
-.landing .fa-angle-right {
-  right: 30px;
-}
+
+
+
 
 
 /* End Landing */
@@ -528,15 +597,15 @@ header nav ul li a:hover::after{
       display: none;
     }
 
-    .landing .change-background {
-      top :58%;
-    }
+
   }
 /* Start Services */
 .services {
-  padding-top: var(--section-padding);
+ 
+
+  padding-top: 150px;
   padding-bottom: var(--section-padding);
-  margin-top: 97px;
+  margin-top: 50px;
 }
 @media (min-width: 768px) {
   .services .services-container {
@@ -579,11 +648,11 @@ header nav ul li a:hover::after{
   color: #777;
 }
 /* End Services */
- /* end services */
+
 
 /* start design */
  .design {
-   margin-top: 97px;
+   margin-top: 50px;
   position: relative;
   height: 600px;
   padding-top: var(--section-padding);
@@ -665,9 +734,10 @@ header nav ul li a:hover::after{
 /* start  portfolio  */
 
 .portfolio {
-  margin-top: 97px;
-  padding-top: var(--section-padding);
+  padding-top: 230px;
   padding-bottom: var(--section-padding);
+  margin-top: -200px;
+ 
  
 }
 
@@ -929,7 +999,7 @@ input.inpo {
   /* Start Video */
 .video {
   position: relative;
-  margin-top:97px;
+  
   
 }
 .video::before {
@@ -974,10 +1044,12 @@ input.inpo {
 
 /* Start About */
 .about {
-  padding-top: var(--section-padding);
+ 
   overflow: hidden;
   text-align: center;
-  margin-top: 197px;
+  padding-top: 230px;
+  padding-bottom: var(--section-padding);
+  margin-top: -110px;
 }
 .about img {
   position: relative;
@@ -994,7 +1066,7 @@ input.inpo {
 /* End About */
 /* Start Stats */
 .stats {
- margin-top:197px;
+ 
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: center;
@@ -1064,11 +1136,56 @@ input.inpo {
 /* End Stats */
 
 /* start skills */
+
+.skills{
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  top: -16px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+
+
+
+
 .our-skills {
   overflow: hidden;
   padding-top: var(--section-padding) ;
   padding-bottom:  var(--section-padding) ;
-  margin-top:197px;
+  
 }
 
 .our-skills .container {
@@ -1173,18 +1290,7 @@ margin-bottom: 30px;
 }
 
 
-.skills{
-  width: 100%;
-  max-width: 600px;
-  padding: 0 20px;
-}
 
-.skill-name{
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
 
 .skill-bar{
   height: 20px;
@@ -1197,60 +1303,39 @@ margin-bottom: 30px;
  background-color: #0fbcf9;
  border-radius: 8px;
  width: 0;
- transition: 2s linear ;
+ transition: 2s all ;
  position: relative;
  animation: abbas 3s infinite;
  -webkit-animation: abbas 3s infinite;
  -moz-animation: abbas 3s infinite;
  -ms-animation: abbas 3s infinite;
  -o-animation: abbas 3s infinite;
- -webkit-transition: 2s linear ;
- -moz-transition: 2s linear ;
- -ms-transition: 2s linear ;
- -o-transition: 2s linear ;
-}
+ -webkit-transition: 2s all ;
+ -moz-transition: 2s all ;
+ -ms-transition: 2s all ;
+ -o-transition: 2s all ;
+} 
 
 @keyframes abbas{
 0% {
   width:0;
 };
 
+100% {
+  width:0;
+};
 
 
 
 }
-.skill-per::before{
-  content: attr(per);
-  position: absolute;
-  padding: 4px 6px;
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 4px;
-  top: -35px;
-  right: 0;
-  transform: translateX(50%);
-}
 
-.skill-per::after{
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  top: -16px;
-  right: 0;
-  transform: translateX(50%) rotate(45deg);
-  border-radius: 2px;
-}
 
 
 
 /* end skills */
 
 /* Start Quote */
-.quote 
-margin-top:197px;
+.quote {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/wep-dis1.jpeg");
@@ -1305,9 +1390,9 @@ margin-top:197px;
 /* End Quote */
 /* Start Pricing */
 .pricing {
-  padding-top: var(--section-padding);
+  padding-top: 230px;
   padding-bottom: var(--section-padding);
-    margin-top:197px;
+  margin-top: -200px;
 }
 .pricing .plans {
   display: grid;
@@ -1470,7 +1555,6 @@ button.contact-link {
 
 /* Start Subscribe */
 .subscribe {
-margin-top:197px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-image: url("images/shuffle-01.jpg");
@@ -1551,9 +1635,9 @@ margin-top:197px;
 
 /* Start Contact */
 .contact {
-  padding-top: var(--section-padding);
+  padding-top: 230px;
   padding-bottom: var(--section-padding);
-    margin-top:197px;
+  margin-top: -200px;
 }
 .contact .content1 {
   display: flex;
@@ -1666,7 +1750,7 @@ margin-top:197px;
 
 /* Start Footer */
 .footer {
-  margin-top: 97px;
+  margin-top: 50px;
   padding-top: calc(var(--section-padding) / 2);
   padding-bottom: calc(var(--section-padding) / 2);
   background-image: url("../images/shuffle-01.jpg");
@@ -1733,59 +1817,3 @@ margin-top:197px;
   right: 10px;
 }
 /* end button to up */
-
-
-
-.skills1{
-  width: 100%;
-  max-width: 600px;
-  padding: 0 20px;
-}
-
-.skill1-name{
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.skill1-bar{
-  height: 20px;
-  background: #cacaca;
-  border-radius: 8px;
-}
-
-.skill1-per{
-  height: 20px;
-  background-color: #0fbcf9;
-  border-radius: 8px;
-  width: 0;
-  transition: 1s linear;
-  position: relative;
-}
-
-.skill1-per::before{
-  content: attr(per);
-  position: absolute;
-  padding: 4px 6px;
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 4px;
-  top: -35px;
-  right: 0;
-  transform: translateX(50%);
-}
-
-.skill1-per::after{
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  top: -16px;
-  right: 0;
-  transform: translateX(50%) rotate(45deg);
-  border-radius: 2px;
-}
-
