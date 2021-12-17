@@ -40,11 +40,16 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+/* 
+  html {
+    scroll-padding-top: 97px;
+  } */
+
   body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
     background-color: #f3f3f3;
-    padding-top: -97px;
+    /* padding-top: 97px; */
     
   }
   ul {
@@ -166,7 +171,7 @@
 
   /* Start Header */
   header {
-    position: fixed;
+    position:fixed;
     left: 0;
     top:0;
     width: 100%;
@@ -181,6 +186,18 @@
     position: relative;
     height: 97px;
     
+  }
+
+  @media  (max-width: 767px) {
+    header  .container  {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      max-height: 50px !important;
+      padding-top: 10px;
+      
+    }
   }
 
   /* start line under header */
@@ -222,11 +239,7 @@
 
   @media (max-width: 767px) {
    
-   
-     
-      
-     
-  
+    
     header nav ul li a {
       padding: 21px !important;
       text-align: center;
@@ -335,10 +348,10 @@ header nav ul li a:hover::after{
     .form{
       display: none;
     }
-    .nav-links {
+    .nav-links  {
       position: fixed;
       background: #19c8fa ;
-      top:97px;
+      top:59px;
       min-height: 100vh;
       right: 0;
       font-size: 20px;
@@ -350,9 +363,11 @@ header nav ul li a:hover::after{
       -webkit-clip-path: circle(30px at 100% -10%);
       transition: all 1s ease-out;
       pointer-events: none;
+     
     }
     .nav-links a{
       border-bottom: 1px solid white !important;
+      
     }
 
    
@@ -618,6 +633,7 @@ header nav ul li a:hover::after{
 }
 .services .srv-box {
   display: flex;
+  padding: 15px;
 }
 .services .srv-box i {
   margin-right: 50px;
@@ -629,11 +645,17 @@ header nav ul li a:hover::after{
   .services  {
     margin-top: 20px !important;
   }
+ 
+  .services .main-heading p{
+    padding: 15px;
+
+  }
   .services .srv-box {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 40px;
+    padding: 15px;
   }
   .services .srv-box i {
     margin: 0 0 30px;
@@ -646,6 +668,7 @@ header nav ul li a:hover::after{
 .services .srv-box p {
   line-height: 2;
   color: #777;
+ 
 }
 /* End Services */
 
@@ -737,7 +760,6 @@ header nav ul li a:hover::after{
   padding-top: 230px;
   padding-bottom: var(--section-padding);
   margin-top: -200px;
- 
  
 }
 
@@ -836,7 +858,7 @@ input.inpo {
 .proo {
  text-align: center;
  font-weight: bold;
- font-size: 20px;
+ font-size: 19px;
  margin-bottom: 30px;
  
 }
@@ -1338,16 +1360,16 @@ margin-bottom: 30px;
 .quote {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url("images/wep-dis1.jpeg");
+  background-image: url("../images/stats.jpg");
   background-size: cover;
   min-height: 100%;
   position: relative;
   text-align: center;
   color: white;
-  -webkit-background-image: url("images/wep-dis1.jpeg");
-  -moz-background-image: url("images/wep-dis1.jpeg");
-  -ms-background-image: url("images/wep-dis1.jpeg");
-  -o-background-image: url("images/wep-dis1.jpeg");
+  -webkit-background-image: url("../images/stats.jpg");
+  -moz-background-image: url("../images/stats.jpg");
+  -ms-background-image: url("../images/stats.jpg");
+  -o-background-image: url("../images/stats.jpg");
 }
 .quote::before {
   content: "";
@@ -1360,6 +1382,7 @@ margin-bottom: 30px;
 }
 .quote .container {
   position: relative;
+ 
 }
 .quote q {
   font-size: 30px;
