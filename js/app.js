@@ -1,3 +1,4 @@
+// start burger icon
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
@@ -17,6 +18,95 @@ navLinks.addEventListener("click", () => {
     
   });
 });
+// end burger icon
+
+
+
+
+//start add class active to nav li a when active and remove from other 
+$('.nav-links li a').click(function () {
+
+  $('.nav-links li a').removeClass('active');
+  $(this).addClass('active');
+});
+//end add class active to nav li a when active and remove from other 
+
+
+
+//  start carousal
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+// forward/Back controls
+function plusSlides(n) {
+  SlideShow(slidePosition += n);
+}
+
+//  images controls
+function currentSlide(n) {
+  SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var dots = document.getElementsByClassName("dots");
+  if (n > slides.length) {slidePosition = 1}
+  if (n < 1) {slidePosition = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" enable", "");
+    
+   
+  }
+  slides[slidePosition-1].style.display = "block";
+  dots[slidePosition-1].className += " enable";
+} 
+
+
+var slidePositionm = 0;
+
+function SlideShown() {
+  var p//#region ;
+  var slides = document.getElementsByClassName("Containers");
+  for (p = 0; p < slides.length; p++) {
+    slides[p].style.display = "none";
+  }
+  slidePositionm++;
+  if (slidePositionm > slides.length) {slidePositionm = 1}
+  slides[slidePositionm-1].style.display = "block";
+  setTimeout(SlideShown, 2000); // Change image every 2 seconds
+
+} 
+
+SlideShown();
+
+// end carousal
+
+
+
+
+
+//  start active label portfolilo
+let switcherLis = document.querySelectorAll(".proo label ");
+
+
+switcherLis.forEach((label) => {
+  label.addEventListener("click", removeActive);
+  
+});
+
+// Remove Active Class From All Lis And Add To Current
+function removeActive() {
+  switcherLis.forEach((label) => {
+    label.classList.remove("active12");
+    this.classList.add("active12");
+  });
+}
+// end active label portfolio
+
 
 
 // start stats conter
@@ -45,27 +135,25 @@ window.onscroll = function () {
  
  
  
-  
-  // setInterval(function(){ 
-  // if (window.scrollY >= n ) {
-  //   $('.skill-per').each(function(){
-  //     var $this = $(this);
-  //     var per = $this.attr('per');
-  //     $this.css("width",per+'%');
-  //     $({animatedValue: 0}).animate({animatedValue: per},{
-  //       duration: 1000,
-  //       step: function(){
-  //         $this.attr('per', Math.floor(this.animatedValue) + '%');
-  //       },
-  //       complete: function(){
-  //         $this.attr('per', Math.floor(this.animatedValue) + '%');
-  //       }
-  //     });
-  //   });
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    
+    if (el.textContent == goal) {
+      clearInterval(count);
+      
+    }
+    
+  }, 3000 / goal)
  
+  
+  
+};
 
-  // }
-  // ; }, 3000);
+
+
+
 
   this.scrollY >= 500 ? span.classList.add("show") : span.classList.remove("show");//button to up
 
@@ -87,14 +175,6 @@ window.onscroll = function () {
 
 
 
-//start add class active to nav li a when active and remove from other 
-$('.nav-links li a').click(function () {
-
-  $('.nav-links li a').removeClass('active');
-  $(this).addClass('active');
-});
-//end add class active to nav li a when active and remove from other 
-
 
 
 //start add active class to nav when arrive section
@@ -111,98 +191,43 @@ $('#nav').onePageNav({
 });
 //end add active class to nav when arrive section
 
-
-
-
-
-
+ 
 
 }
 
-
-function startCount(el) {
-  let goal = el.dataset.goal;
-  let count = setInterval(() => {
-    el.textContent++;
-    
-    if (el.textContent == goal) {
-      clearInterval(count);
-      
-    }
-    
-  }, 3000 / goal)
  
+setInterval(function(){ 
   
-  
-};
+  $('.skill-per').each(function(){
+    var $this = $(this);
+    var per = $this.attr('per');
+    $this.css("width",per+'%');
+    $({animatedValue: 0}).animate({animatedValue: per},{
+      duration: 2900,
+      step: function(){
+        $this.attr('per', Math.ceil(this.animatedValue) + '%');
+      },
+      complete: function(){
+        $this.attr('per', Math.ceil(this.animatedValue) + '%');
+      }
+    });
+  });
 
 
+
+; }, 3000);
 
 // end stats conter
 
 
-//  start active label portfolilo
-let switcherLis = document.querySelectorAll(".proo label ");
-
-
-switcherLis.forEach((label) => {
-  label.addEventListener("click", removeActive);
-  
-});
-
-// Remove Active Class From All Lis And Add To Current
-function removeActive() {
-  switcherLis.forEach((label) => {
-    label.classList.remove("active12");
-    this.classList.add("active12");
-  });
-}
-// end active label portfolio
 
 // start button to up
-
-
-
-
-span.onclick = function () {
+span.addEventListener("click", myFunction);
+function myFunction() {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
 };
 // end button to up
-
-
-setInterval(function(){ 
-  $('.skill-per').each(function (){
-    
-    var $this = $(this);
-    
-    var per = $this.attr('per');
-
-    
-    $this.css("width",per+'%');
-   
-    $({animatedValue: 0}).animate({animatedValue: per},{
-      duration: 2000,
-      step: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      },
-      complete: function(){
-        $this.attr('per', Math.floor(this.animatedValue) + '%');
-      }
-    });
-   
-  });
-
-  
-  ; }, 3000);
-  
-
  
-
- 
-
-  
- 
-  
