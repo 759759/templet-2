@@ -73,6 +73,7 @@ function SlideShown() {
   var slides = document.getElementsByClassName("Containers");
   for (p = 0; p < slides.length; p++) {
     slides[p].style.display = "none";
+    
   }
   slidePositionm++;
   if (slidePositionm > slides.length) {slidePositionm = 1}
@@ -204,12 +205,12 @@ setInterval(function(){
     $this.css("width",per+'%');
     $({animatedValue: 0}).animate({animatedValue: per},{
       duration: 2900,
-      step: function(){
-        $this.attr('per', Math.ceil(this.animatedValue) + '%');
-      },
-      complete: function(){
-        $this.attr('per', Math.ceil(this.animatedValue) + '%');
-      }
+      // step: function(){
+      //   $this.attr('per', Math.ceil(this.animatedValue) + '%');
+      // },
+      // complete: function(){
+      //   $this.attr('per', Math.ceil(this.animatedValue) + '%');
+      // }
     });
   });
 
