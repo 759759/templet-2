@@ -244,6 +244,7 @@
       padding: 21px !important;
       text-align: center;
      font-size: 20px !important;
+     height: 115px;
     }
     
 
@@ -388,7 +389,7 @@ header nav ul li a:hover::after{
       clip-path: circle(1000px at 100% );
       -webkit-clip-path: circle(1000px at 100% );
       pointer-events: all;
-      
+      z-index: 40000;
       /* right: 0; */
     }
     
@@ -507,8 +508,8 @@ header nav ul li a:hover::after{
  position: relative; 
   top:-50px;
   cursor: pointer;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   margin: 0 3px;
   background-color: white;
   border-radius: 50%;
@@ -516,6 +517,12 @@ header nav ul li a:hover::after{
   transition: background-color 0.5s ease;
   z-index: 1;
   
+}
+
+@media (max-width:767px){
+ .dots {
+   top: -106px;
+ } 
 }
 
 .enable, .dots:hover {
@@ -606,6 +613,13 @@ header nav ul li a:hover::after{
       padding: 15px;
       background-color:rgb(15 116 143 / 70%);
       color:white;
+    }
+
+    .text10 h2 {
+      margin-bottom: 15px;
+    }
+    .text10 p {
+      line-height: 1.5;
     }
 
    .landing .text {
@@ -757,9 +771,12 @@ header nav ul li a:hover::after{
 /* start  portfolio  */
 
 .portfolio {
-  padding-top: 230px;
-  padding-bottom: var(--section-padding);
-  margin-top: -200px;
+   
+    padding-top: 240px;
+    padding-bottom: var(--section-padding);
+  
+   
+    margin-top: -72px;
  
 }
 
@@ -1413,9 +1430,10 @@ margin-bottom: 30px;
 /* End Quote */
 /* Start Pricing */
 .pricing {
-  padding-top: 230px;
-  padding-bottom: var(--section-padding);
-  margin-top: -200px;
+  padding-top: 240px;
+    padding-bottom: var(--section-padding);
+   
+    margin-top: -72px;
 }
 .pricing .plans {
   display: grid;
@@ -1658,9 +1676,12 @@ button.contact-link {
 
 /* Start Contact */
 .contact {
-  padding-top: 230px;
-  padding-bottom: var(--section-padding);
-  margin-top: -200px;
+ 
+  
+    padding-top: 240px;
+    padding-bottom: var(--section-padding);
+   
+    margin-top: -72px;
 }
 .contact .content1 {
   display: flex;
