@@ -181,13 +181,19 @@ function startCount(el) {
 //start add active class to nav when arrive section
 $('#nav').onePageNav({
 	currentClass: 'active',
-	changeHash: false,
+	changeHash: true,
 	scrollSpeed: 550,
 	scrollThreshold: 0.9,
 	filter: '',
 	easing: 'swing',
  
-	
+	begin: function() {
+		//Hack so you can click other menu items after the initial click
+		$('body').append('<div id="device-dummy" style="height: 1px;"></div>');
+	},
+	end: function() {
+		$('#device-dummy').remove();
+	}
 
 });
 //end add active class to nav when arrive section
